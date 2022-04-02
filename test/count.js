@@ -1,3 +1,11 @@
+/*
+ * @Date: 2022-04-02 10:37:09
+ * @Author: Yao guan shou
+ * @LastEditors: Yao guan shou
+ * @LastEditTime: 2022-04-02 14:07:14
+ * @FilePath: /ot-text/modules/ot-fuzzer/test/count.js
+ * @Description: 
+ */
 // This is a simple test for the fuzzer, using a trivial OT type. The type
 // is correct - we should add tests where types are not correct get caught by
 // the fuzzer.
@@ -33,7 +41,9 @@ const count = {
 
 const genOp = doc => [[doc, 1], doc + 1];
 
-
+console.log('fuzzer======',fuzzer)
+console.log('count======',count)
+console.log('genOp======',genOp)
 describe('type count', () => it('should pass the randomizer tests', function() {
   this.slow(200);
   fuzzer(count, genOp);
